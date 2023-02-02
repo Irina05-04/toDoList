@@ -1,0 +1,16 @@
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+li{
+   list-style-type: none;
+}
+.main, .header, .footer{
+   max-width: 500px;
+   margin: 0 auto;
+}
+input[type=text]{
+   padding: 0 10px;
+}

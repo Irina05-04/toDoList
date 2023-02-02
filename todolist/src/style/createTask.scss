@@ -1,0 +1,22 @@
+@use './mixin.scss';
+@use './variables';
+
+.create-task{
+   display: flex;
+   justify-content: space-between;
+   &__input{
+      width: 410px;
+      height: 32px;
+      border-radius: 8px;
+      border: 1px solid variables.$color-grey;
+      &:focus{
+         outline: 1px solid variables.$color-green;
+      }
+   }
+   &__button{
+      @include mixin.roundButton(32px, 32px, variables.$color-green, 24px);
+      &:hover{
+         background-color: variables.$color_hoverbtn;
+      }
+   }
+}

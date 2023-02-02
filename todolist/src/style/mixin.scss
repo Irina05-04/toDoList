@@ -1,0 +1,19 @@
+@use './variables.scss';
+
+@mixin background($boder-radius, $color, $padding){
+   border-radius: $boder-radius;
+   background-color: $color;
+   padding: $padding;
+}
+
+@mixin roundButton($width, $height, $back-color, $font-size, $boder-radius: 100%, $color: variables.$color-white){
+   width: $width;
+   height: $height;
+   color: $color;
+   background-color: $back-color;
+   border-radius: $boder-radius;
+   border: none;
+   font-size: $font-size;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+}

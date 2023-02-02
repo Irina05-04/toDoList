@@ -1,0 +1,28 @@
+@use './variables.scss';
+@use './mixin.scss';
+
+.task-item{
+   max-width: 500px;
+   display: flex;
+   justify-content: space-between;
+   @include mixin.background(8px,variables.$color_task, 10px 30px);
+   &_done{
+      background-color: variables.$color_donetask;
+   }
+   &__button{
+      @include mixin.roundButton(28px, 28px, variables.$color_delete, 24px);
+      &:hover{
+         background-color: variables.$color_deleteHover;
+      }
+   }
+   &__text{
+      width: 300px;
+      text-align: left;
+      &_done{
+         text-decoration: line-through;
+      }
+   }
+   &__icon{
+      width: 18px;
+   }
+}
