@@ -1,0 +1,12 @@
+@use './variables.scss';
+@use './mixin.scss';
+
+.main{
+   @include mixin.background(8px, variables.$color_lightGrey, 20px);
+}
+.header{
+   &__title{
+      margin: 20px 0;
+      font-size: 24px;
+   }
+}

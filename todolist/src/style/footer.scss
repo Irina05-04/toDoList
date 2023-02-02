@@ -1,0 +1,27 @@
+@use './variables.scss';
+@use './mixin.scss';
+
+.info{
+   display: flex;
+   justify-content: space-between;
+   margin-top: 20px;
+   &__amount{
+      color: variables.$color_deleteHover;
+      font-size: 16px;
+      font-weight: 700;
+   }
+   &__buttons{
+      display: flex;
+      column-gap: 5px;
+   }
+   &__button{
+      padding: 5px 10px;
+      @include mixin.roundButton(auto,auto,variables.$color_filter,14px,8px);
+      &:hover{
+         background-color: variables.$color_filterHover;
+      }
+      &_active{
+         background-color: variables.$color_filterActive;
+      }
+   }
+}
